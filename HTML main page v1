@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesion</title>
+    <style>
+        h1 {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+            color: white;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            color: white;
+        }
+        img {
+            max-width: 10%;
+        }
+    </style>
+</head>
+<body>
+    <body style="background-color: darkslategrey;">
+    <div class="formulariostudent">
+        <h1>¿Vienes a ayudar...</h1>
+        <img src="https://cdn-icons-png.flaticon.com/512/354/354637.png" alt="student">
+        <form method="post">
+            <div class="username">
+                <input type="text" placeholder="Nombre de usuario" required>
+            </div>
+            <div class="username"></div>
+                <input type="password" placeholder="contraseña" required>
+            </div>
+            <div class="recordar">¿olvidaste tu contraseña?</div>
+            <div class="registrarse">
+                <a href="#">registrarse</a>
+                <br>
+                <input type="submit" value="iniciar">
+            </div>
+        </form>
+    </div>
+    <div class="formulariootro"></div>
+        <h1>O a solicitar ayuda?</h1>
+        <img src="https://cdn-icons-png.flaticon.com/512/4042/4042356.png" alt="student">
+        <form method="post">
+            <div class="username">
+                <input type="text" placeholder="Nombre de usuario" required>
+            </div>
+            <div class="username"></div>
+                <input type="password" placeholder="contraseña" required>
+            </div>
+            <div class="recordar">¿olvidaste tu contraseña?</div>
+            <div class="registrarse">
+                <a href="#">registrarse</a>
+                <br>
+                <input type="submit" value="iniciar">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
