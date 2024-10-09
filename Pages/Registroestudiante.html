@@ -1,0 +1,81 @@
+<!DOCTYPE html5>
+
+<!-- Defines the language of the document as English -->
+<html lang="en">
+<head>
+
+    <!-- Sets the character encoding to UTF-8, which allows the use of special characters -->
+    <meta charset="UTF-8">
+    <!-- Configures the viewport to make the site responsive and adjust well on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Defines the title of the page that appears in the browser tab -->
+    <title>Registro</title>
+</head>
+<style>
+    /* Applies styling to <h1> elements with a specific font, white color, and centered alignment */
+    h1 {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-align: center;
+        color: white;
+    }
+     /* Applies global styles to the body of the page: font, centered text alignment, and white text color */
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        color: white;
+    }
+     /* Limits the size of images to a maximum of 10% of the available width */
+    img {
+        max-width: 10%;
+    }
+    /* Applies styling to <h3> elements with a specific font, white color, and left alignment */
+    h3 {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        color: white;
+    }
+</style>
+<body>
+    <!-- Sets the background color of the body to "sandybrown"-->
+    <body style="background-color: rgb(47, 79, 79);">
+
+    <!-- Starts a division with the class "formulariostudent" to organize the form content -->
+    <div class="formulariostudent">
+
+    <!-- Link to another page called "iniciosesion.html" with text inside an <h3> tag -->
+        <a href="iniciosesion.html"><h3>Home</h3></a>
+        <h1>Sign up</h1>
+
+         <!-- Image added from the folder Images -->
+        <img src="/Images/estudiante.png" alt="student">
+
+         <!-- Starts the form with the POST method to send the data -->
+        <form method="post">
+
+              <!-- Input field for the username, required to submit the form -->
+            <div class="username">
+                <input type="text" placeholder="username" required>
+            </div>
+            <div class="username"></div>
+
+             <!-- Input field for the password, required -->
+                <input type="password" placeholder="password" required>
+            </div>
+
+              <!-- Input field for the email, required -->
+            <div class="mail"></div>
+                <input type="text" placeholder="e-mail" required>
+            </div>
+
+            <!-- Input field to select the birthdate using a date picker -->
+            <br>
+            Select your date birth: 
+            <input type="date">
+            <br>
+            <!-- Link to the page "paginainicio.html" -->
+                <a href="Paginainicio.html">Home</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

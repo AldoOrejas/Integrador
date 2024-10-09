@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesion</title>
-        <!-- In this part we choose a predeterminated style for the header 1, the body and a size for the images that we use in the main page -->    
+        <!-- In this part we choose a predeterminated style for the header 1, the body and a size for the images that we use in the main page --> 
+         <link href="CSS/bootstrap.min.css" rel="stylesheet">   
     <style>
         h1 {
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -25,10 +26,35 @@
 <!--In this part of the code we decided to split our job offers in 2, in this chase offer a job or job
 also we divide this with div for a easier way to work-->
 <body>
-    <body style="background-color: darkslategrey;">
-    <div class="formulariostudent">
+    <body style="background-color: rgb(47, 79, 79);">
+<!--
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner" id="carousellook">
+              <div class="carousel-item active">
+                <img src="https://cdn-icons-png.flaticon.com/512/354/354637.png" class="d-block w-100" alt="Looking">
+              </div>
+              <div class="carousel-item" id="carouselprov">
+                <img src="https://cdn-icons-png.flaticon.com/512/4042/4042356.png" class="d-block w-100" alt="Provide">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </button>
+          </div>
+-->
+
+   <div class="formulariostudent">
         <h1>Looking for a job?</h1>
-        <img src="https://cdn-icons-png.flaticon.com/512/354/354637.png" alt="student">
+        <img src="/Images/estudiante.png" alt="student">
         <form method="post">
             <div class="username">
                 <input type="text" placeholder="username" required>
@@ -38,7 +64,7 @@ also we divide this with div for a easier way to work-->
             </div>
             <div class="remember">Forgot your password?</div>
             <div class="sign-up">
-                <a href="#">Sign up</a>
+                <a href="Registroestudiante.html">Sign up</a>
                 <br>
                 <input type="submit" value="start">
             </div>
@@ -46,7 +72,7 @@ also we divide this with div for a easier way to work-->
     </div>
     <div class="formulariootro"></div>
         <h1>Provide employment</h1>
-        <img src="https://cdn-icons-png.flaticon.com/512/4042/4042356.png" alt="student">
+        <img src="/Images/noestudiante.png" alt="student">
         <form method="post">
             <div class="username">
                 <input type="text" placeholder="username" required>
@@ -56,7 +82,7 @@ also we divide this with div for a easier way to work-->
             </div>
             <div class="remember">Forgot your password?</div>
             <div class="sign-up">
-                <a href="#">Sign up</a>
+                <a href="registrootro.html">Sign up</a>
                 <br>
                 <input type="submit" value="start">
             </div>
