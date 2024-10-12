@@ -15,3 +15,34 @@
 	width: 350px;
     align-self: center;
 }
+.media {
+    border-style: solid;
+	border-color:rgb(138, 138, 138);
+	background-color: rgb(107, 103, 103);
+    width: 350px;
+    border-radius: 11px;
+    position: relative;
+}
+.media-body{
+    color: aliceblue;
+}
+
+.map{
+    float: right;
+    border-style: solid;
+	border-color: rgb(255, 255, 255);
+	background-color: rgb(255, 255, 255);
+    width: 350px;
+    border-radius: 11px;
+    position:relative
+}
+
+.mr-3 {
+    border-style: solid;
+	border-color:rgb(0, 0, 0);
+	background-color: rgb(0, 0, 0); 
+    border-radius: 11px;
+}
+.mt-0-mb-1{
+    font-style: italic;
+}
