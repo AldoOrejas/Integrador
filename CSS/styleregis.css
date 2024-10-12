@@ -1,0 +1,17 @@
+.formulariostudent{
+    border-style: solid;
+	border-color: rgb(0, 0, 0);
+	background-color: rgb(27, 26, 26);
+	border-radius: 11px;
+	width: 350px;
+    align-self: center;
+}
+
+.formulariootro{
+    border-style: solid;
+	border-color: rgb(0, 0, 0);
+	background-color: rgb(27, 26, 26);
+	border-radius: 11px;
+	width: 350px;
+    align-self: center;
+}

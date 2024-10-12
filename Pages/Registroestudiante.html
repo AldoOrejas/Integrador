@@ -11,6 +11,7 @@
     <!-- Defines the title of the page that appears in the browser tab -->
     <title>Registro</title>
 </head>
+
 <style>
     /* Applies styling to <h1> elements with a specific font, white color, and centered alignment */
     h1 {
@@ -26,7 +27,7 @@
     }
      /* Limits the size of images to a maximum of 10% of the available width */
     img {
-        max-width: 10%;
+        max-width: 25%;
     }
     /* Applies styling to <h3> elements with a specific font, white color, and left alignment */
     h3 {
@@ -35,15 +36,20 @@
         color: white;
     }
 </style>
+<link rel="stylesheet" href="/CSS/styleregis.css">
 <body>
     <!-- Sets the background color of the body to "sandybrown"-->
     <body style="background-color: rgb(47, 79, 79);">
 
-    <!-- Starts a division with the class "formulariostudent" to organize the form content -->
+        <!-- Link to another page called "iniciosesion.html" with text inside an <h3> tag -->
+        
+        <a href="index.html"><h3>Home</h3></a>
+    
+            <!-- Starts a division with the class "formulariostudent" to organize the form content -->
+    
     <div class="formulariostudent">
 
-    <!-- Link to another page called "iniciosesion.html" with text inside an <h3> tag -->
-        <a href="iniciosesion.html"><h3>Home</h3></a>
+
         <h1>Sign up</h1>
 
          <!-- Image added from the folder Images -->
@@ -60,13 +66,11 @@
 
              <!-- Input field for the password, required -->
                 <input type="password" placeholder="password" required>
-            </div>
 
               <!-- Input field for the email, required -->
-            <div class="mail"></div>
-                <input type="text" placeholder="e-mail" required>
-            </div>
-
+          
+                <br><input type="text" placeholder="e-mail" required>
+          
             <!-- Input field to select the birthdate using a date picker -->
             <br>
             Select your date birth: 
