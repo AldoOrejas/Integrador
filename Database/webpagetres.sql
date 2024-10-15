@@ -2,8 +2,8 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost:3307
--- Tiempo de generación: 04-10-2024 a las 14:39:19
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 10-10-2024 a las 20:41:25
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -167,6 +167,19 @@ CREATE TABLE `tmessagereport` (
   `Created_At` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `Description` varchar(500) NOT NULL,
   `Active` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tnotifications`
+--
+
+CREATE TABLE `tnotifications` (
+  `IdNotification` int(11) NOT NULL,
+  `Description` varchar(500) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `active` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -354,6 +367,12 @@ ALTER TABLE `tmessagereport`
   ADD PRIMARY KEY (`IdReport`);
 
 --
+-- Indices de la tabla `tnotifications`
+--
+ALTER TABLE `tnotifications`
+  ADD PRIMARY KEY (`IdNotification`);
+
+--
 -- Indices de la tabla `totherreport`
 --
 ALTER TABLE `totherreport`
@@ -416,6 +435,12 @@ ALTER TABLE `tmessagereport`
   MODIFY `IdReport` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT de la tabla `tnotifications`
+--
+ALTER TABLE `tnotifications`
+  MODIFY `IdNotification` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `totherreport`
 --
 ALTER TABLE `totherreport`
@@ -426,12 +451,6 @@ ALTER TABLE `totherreport`
 --
 ALTER TABLE `tuserother`
   MODIFY `IdOther` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `tuserstudent`
---
-ALTER TABLE `tuserstudent`
-  MODIFY `IdStudent` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
