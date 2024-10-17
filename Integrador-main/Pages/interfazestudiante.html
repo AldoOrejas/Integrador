@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InicioEstudiante</title>
+<!-- This is the reference to bootstrap and CSS, we use it to get a better interface-->
+    <link href="/CSS/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/styleregis.css">
+<!-- We decided to put the navbar in the head for a better information management and a more organizated way to code -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Easy Job</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+<!-- This is the way to go back to the main, in the navbar we will use a ref and this will send to pagina de inicio -->                
+              <a class="nav-link" href="/Pages/loginstudent.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+
+          </ul>
+<!-- This will be a search bar, this could be use it for search other users or tasks-->
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+</head>
+<body>
+
+<body style="background-color: rgb(50, 79, 79);">
+    <br>
+    <!-- This is a example of how will be the map of the city -->
+    <div class="map"> <img src="/Images/map.png" width="50%"> Mapa de ejemplo </div>
+    <!-- This is how will be the task that the other people hope that someone do, as a worker this is how will look your interface, all the 
+     tasks will be as a list-->
+    <ul class="list-unstyled">
+        <li class="media">
+          <img src="/Images/boy.png" class="mr-3" alt="..." width="15%">
+          <div class="media-body">
+            <h5 class="mt-0-mb-1">List-based media object</h5>
+            <p>All my girls vintage Chanel baby. So you can have your cake. Tonight, tonight, tonight, I'm walking on air. Slowly swallowing down my fear, yeah yeah. Growing fast into a bolt of lightning. So hot and heavy, 'Til dawn. That fairy tale ending with a knight in shining armor. Heavy is the head that wears the crown.</p>
+          </div>
+        </li>
+        <li class="media my-4">
+          <img src="/Images/boy.png" class="mr-3" alt="..." width="15%">
+          <div class="media-body">
+            <h5 class="mt-0-mb-1">List-based media object</h5>
+            <p>Maybe a reason why all the doors are closed. Cause once you’re mine, once you’re mine. Be your teenage dream tonight. Heavy is the head that wears the crown. It's not even a holiday, nothing to celebrate. A perfect storm, perfect storm.</p>
+          </div>
+        </li>
+        <li class="media">
+          <img src="/Images/boy.png" class="mr-3" alt="..." width="15%" >
+          <div class="media-body">
+            <h5 class="mt-0-mb-1">List-based media object</h5>
+            <p>Are you brave enough to let me see your peacock? There’s no going back. This is the last time you say, after the last line you break. At the eh-end of it all.</p>
+          </div>
+        </li>
+      </ul>
+
+</body>
+</html>

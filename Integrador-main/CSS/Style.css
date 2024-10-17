@@ -1,0 +1,18 @@
+<<<<<<< HEAD
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#box {
+    border-style: solid;
+    border-color: rgb(235, 203, 203);
+    width: 250px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+
+>>>>>>> 09f4103a468945a1e547bb7832915639f5a15e07

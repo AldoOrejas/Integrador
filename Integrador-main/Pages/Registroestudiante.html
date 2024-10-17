@@ -1,0 +1,170 @@
+<!DOCTYPE html5>
+
+<!-- Defines the language of the document as English -->
+<html lang="en">
+<head>
+
+    <!-- Sets the character encoding to UTF-8, which allows the use of special characters -->
+    <meta charset="UTF-8">
+    <!-- Configures the viewport to make the site responsive and adjust well on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Defines the title of the page that appears in the browser tab -->
+    <title>Registro</title>
+</head>
+    <!-- Bootstrap core CSS -->
+    <link href="/CSS/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="/CSS/form-validation.css">
+<style>
+    h1 {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-align: center;
+        color: white;
+    }
+     /* Applies global styles to the body of the page: font, centered text alignment, and white text color */
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        color: white;
+    }
+     /* Limits the size of images to a maximum of 10% of the available width */
+    img {
+        max-width: 25%;
+    }
+    /* Applies styling to <h3> elements with a specific font, white color, and left alignment */
+    h3 {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        color: white;
+    }
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+</style>
+
+<body>
+    <body style="background-color: rgb(47, 79, 79);">
+        <div class="container">
+          <div class="py-5 text-center">
+            <img class="d-block mx-auto mb-4" src="/Images/estudiante.png" alt="" width="72" height="72">
+            <h2>Create account</h2>
+            <p class="lead">Please, fill al the information to create your Easy Job account.</p>
+          </div>
+        <!--All this part will be for the user add his personal information-->
+          <div class="row">
+            <div class="col-md-8 order-md-1">
+              <h4 class="mb-3">Personal information</h4>
+              <form class="needs-validation" novalidate>
+                <div class="row">
+                  <!--Name of the user-->
+                  <div class="col-md-6 mb-3">
+                    <label for="firstName">First name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                      Valid first name is required.
+                    </div>
+                  </div>
+                  <!--Last name of the user-->
+                  <div class="col-md-6 mb-3">
+                    <label for="lastName">Last name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                      Valid last name is required.
+                    </div>
+                  </div>
+                  <!--Date birth of the user-->
+                  <div class="col-md-6 mb-3">
+                    <label for="datebirth">Select your date birth</label>
+                    <input type="date" class="datebirth" placeholder="" required>
+                  </div>
+                </div>
+                <!--The user will add his username to create his account-->
+                <div class="mb-3">
+                  <label for="username">Username</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">@</span>
+                    </div>
+                    <input type="text" class="form-control" id="username" placeholder="Username" required>
+                    <div class="invalid-feedback" style="width: 100%;">
+                      Your username is required.
+                    </div>
+                  </div>
+                </div>
+                <!--A div to add the mail of the user-->
+                <div class="mb-3">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+                  <div class="invalid-feedback">
+                    Please enter a valid email.
+                  </div>
+                </div>
+                <!--Here the user will add his address -->
+                <div class="mb-3">
+                  <label for="address">Address</label>
+                  <input type="text" class="form-control" id="address" placeholder="Santa Rosa 9315" required>
+                  <div class="invalid-feedback">
+                    Please enter your address.
+                  </div>
+                </div>
+        
+                <!--The user will select his country-->
+                <div class="row">
+                  <div class="col-md-5 mb-3">
+                    <label for="country">Country</label>
+                    <select class="custom-select d-block w-100" id="country" required>
+                      <option value="">Choose...</option>
+                      <option>Mexico</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid country.
+                    </div>
+                  </div>
+                  <!--Select the state where the user is from-->
+                  <div class="col-md-4 mb-3">
+                    <label for="state">State</label>
+                    <select class="custom-select d-block w-100" id="state" required>
+                      <option value="">Choose...</option>
+                      <option>Chihuahua</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please provide a valid state.
+                    </div>
+                  </div>
+                  <!--In this div the user will add his zip-->
+                  <div class="col-md-3 mb-3">
+                    <label for="zip">Zip</label>
+                    <input type="text" class="form-control" id="zip" placeholder="" required>
+                    <div class="invalid-feedback">
+                      Zip code required.
+                    </div>
+                  </div>
+                </div>
+                <hr class="mb-4">
+                
+                <!-- Finally in this part the user will create a profile -->
+                <a href="/Pages/interfazestudiante.html" class="btn btn-primary btn-lg btn-block" role="button" aria-pressed="true">Primary link</a>      </form>
+            </div>
+          </div>
+        
+          <footer class="my-5 pt-5 text-muted text-center text-small">
+            <ul class="list-inline">
+              <li class="list-inline-item"><a href="#">Privacy</a></li>
+              <li class="list-inline-item"><a href="#">Terms</a></li>
+              <li class="list-inline-item"><a href="#">Info</a></li>
+            </ul>
+          </footer>
+        </div>
+</body>
+</html>
