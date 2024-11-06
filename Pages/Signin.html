@@ -4,28 +4,23 @@
 <html lang="en">
 <head>
 
-    <!-- Sets the character encoding to UTF-8, which allows the use of special characters -->
+      <!-- Sets the character encoding to UTF-8, which allows the use of special characters -->
     <meta charset="UTF-8">
-    <!-- Configures the viewport to make the site responsive and adjust well on mobile devices -->
+      <!-- Configures the viewport to make the site responsive and adjust well on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Defines the title of the page that appears in the browser tab -->
+      <!-- Defines the title of the page that appears in the browser tab -->
     <title>Registro</title>
+
+         <!-- Bootstrap core CSS -->
+        <link href="../CSS/bootstrap.min.css" rel="stylesheet">
+          <!-- Custom styles for this template -->
+        <link rel="stylesheet" href="../CSS/Style.css">
 </head>
-    <!-- Bootstrap core CSS -->
-    <link href="/CSS/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="/CSS/form-validation.css">
+
 <style>
     h1 {
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         text-align: center;
-        color: white;
-    }
-     /* Applies global styles to the body of the page: font, centered text alignment, and white text color */
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-        text-align: center;
-        color: white;
     }
      /* Limits the size of images to a maximum of 10% of the available width */
     img {
@@ -35,7 +30,7 @@
     h3 {
         font-family: Arial, Helvetica, sans-serif;
         text-align: left;
-        color: white;
+
     }
 .bd-placeholder-img {
   font-size: 1.125rem;
@@ -55,15 +50,21 @@
 
 <body>
     <body style="background-color: rgb(47, 79, 79);">
+      <div class="bck">
+        <br>
+        <div class="col-md-1 order-md-0">
+        <a href="../Pages/home.html" style="border-radius: 10px;" class="btn btn-outline-primary" role="button" aria-pressed="true">Back</a>
+        </div>
         <div class="container">
           <div class="py-5 text-center">
-            <img class="d-block mx-auto mb-4" src="/Images/estudiante.png" alt="" width="72" height="72">
+            <img class="col-md-2 mx-auto" src="../Images/estudiante.png" alt="" width="adjust" height="adjust">
+            <img class="col-md-2 mx-auto" src="../Images/noestudiante.png" alt="" width="adjust" height="adjust">
             <h2>Create account</h2>
             <p class="lead">Please, fill al the information to create your Easy Job account.</p>
           </div>
         <!--All this part will be for the user add his personal information-->
           <div class="row">
-            <div class="col-md-8 order-md-1">
+            <div class="col-md-12 order-md-1">
               <h4 class="mb-3">Personal information</h4>
               <form class="needs-validation" novalidate>
                 <div class="row">
@@ -84,26 +85,14 @@
                     </div>
                   </div>
                   <!--Date birth of the user-->
-                  <div class="col-md-6 mb-3">
+                  <div class="col-md-12 mb-3">
                     <label for="datebirth">Select your date birth</label>
                     <input type="date" class="datebirth" placeholder="" required>
                   </div>
                 </div>
-                <!--The user will add his username to create his account-->
-                <div class="mb-3">
-                  <label for="username">Username</label>
-                  <div class="input-group">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text">@</span>
-                    </div>
-                    <input type="text" class="form-control" id="username" placeholder="Username" required>
-                    <div class="invalid-feedback" style="width: 100%;">
-                      Your username is required.
-                    </div>
-                  </div>
-                </div>
+
                 <!--A div to add the mail of the user-->
-                <div class="mb-3">
+                <div class="mb-4">
                   <label for="email">Email</label>
                   <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
                   <div class="invalid-feedback">
@@ -111,50 +100,43 @@
                   </div>
                 </div>
                 <!--Here the user will add his address -->
-                <div class="mb-3">
+                <div class="mb-4">
                   <label for="address">Address</label>
                   <input type="text" class="form-control" id="address" placeholder="Santa Rosa 9315" required>
                   <div class="invalid-feedback">
                     Please enter your address.
                   </div>
                 </div>
-        
-                <!--The user will select his country-->
+
                 <div class="row">
-                  <div class="col-md-5 mb-3">
-                    <label for="country">Country</label>
-                    <select class="custom-select d-block w-100" id="country" required>
-                      <option value="">Choose...</option>
-                      <option>Mexico</option>
-                    </select>
-                    <div class="invalid-feedback">
-                      Please select a valid country.
-                    </div>
-                  </div>
-                  <!--Select the state where the user is from-->
-                  <div class="col-md-4 mb-3">
-                    <label for="state">State</label>
-                    <select class="custom-select d-block w-100" id="state" required>
-                      <option value="">Choose...</option>
-                      <option>Chihuahua</option>
-                    </select>
-                    <div class="invalid-feedback">
-                      Please provide a valid state.
-                    </div>
-                  </div>
                   <!--In this div the user will add his zip-->
-                  <div class="col-md-3 mb-3">
+                  <div class="col-md-6 mt-0">
                     <label for="zip">Zip</label>
                     <input type="text" class="form-control" id="zip" placeholder="" required>
                     <div class="invalid-feedback">
                       Zip code required.
                     </div>
                   </div>
+                  <div class="col-md-6 order-md-0">
+                    <div class="wrap">
+                      <div class="radio">
+                        <h5>Select One</h5>
+                          <input type="radio" name="job" id="Student">
+                          <label for="Student">Student</label>
+
+                          <input type="radio" name="job" id="Employeer">
+                          <label for="Employeer">Employeer</label>
+
+                      </div>
+                    </div>  
+                  </div>
                 </div>
+                
                 <hr class="mb-4">
                 
+
                 <!-- Finally in this part the user will create a profile -->
-                <a href="/Pages/interfazestudiante.html" class="btn btn-primary btn-lg btn-block" role="button" aria-pressed="true">Primary link</a>      </form>
+                <a href="../Pages/interfazestudiante.html" class="btn btn-primary btn-lg btn-block" role="button" aria-pressed="true">Log in</a>     </form>
             </div>
           </div>
         
@@ -166,5 +148,6 @@
             </ul>
           </footer>
         </div>
+      </div>
 </body>
 </html>
