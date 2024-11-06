@@ -1,18 +1,55 @@
-<<<<<<< HEAD
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+/*SIGN IN CSS */
+
+.container {
+    max-width: 1920px;
+    place-items: center;
+  }
+  
+.lh-condensed { 
+    line-height: 1.25; 
 }
 
-#box {
-    border-style: solid;
-    border-color: rgb(235, 203, 203);
-    width: 250px;
+.bck {
+    border-color: white;
+    background-color: white;
     border-radius: 20px;
-    text-align: center;
 }
 
+.home{
+    left: auto;
+}
+/* employer interface */
 
->>>>>>> 09f4103a468945a1e547bb7832915639f5a15e07
+.jumbotron {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-bottom: 0;
+    background-color: #fff;
+  }
+  @media (min-width: 768px) {
+    .jumbotron {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+  
+  .jumbotron p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .jumbotron h1 {
+    font-weight: 300;
+  }
+  
+  .jumbotron .container {
+    max-width: 40rem;
+  }
+  
+  footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  footer p {
+    margin-bottom: .25rem;
+  }
