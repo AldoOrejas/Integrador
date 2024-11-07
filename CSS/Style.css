@@ -10,9 +10,11 @@
 }
 
 .bck {
-    border-color: white;
+    border-color: black;
+    border-style: solid;
     background-color: white;
     border-radius: 20px;
+
 }
 
 .home{
