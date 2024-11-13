@@ -1,12 +1,16 @@
 /*SIGN IN CSS */
-
-.container {
-    max-width: 1920px;
-    place-items: center;
-  }
-  
 .lh-condensed { 
     line-height: 1.25; 
+}
+
+.sign{
+  background-color: #ffffff;
+  padding: 5%;
+  max-width: max-content;
+  border-radius: 11px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;  
 }
 
 .bck {
@@ -53,3 +57,119 @@
   footer p {
     margin-bottom: .25rem;
   }
+
+/* JobCreation */
+.blck-1{
+margin: 1.5rem;
+color: #fff;
+padding: 1.5rem;
+align-content: center;
+max-width: 90%;
+border-style: solid;
+border-radius: 11px;
+background-color: rgb(47 49 79);
+}
+
+.dex{
+  padding: 1.5rem;
+  max-width: 80%;
+  border-radius: 11px;
+  
+}
+
+.btn-primary{
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Login CSS */
+
+.grid{
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login{
+  background-color: #ffffff;
+  padding: 1.5rem 1rem;
+  max-width: max-content;
+  border-radius: 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+}
+.user-name{
+  width: 16rem;
+  border-color: #000000;
+
+}
+
+.imglog{
+  width: 25%;
+  border-style: solid;
+  border-color: #000000;
+  border-radius: 8rem;
+  display: flex;
+  justify-content: center;
+  margin: 3%;
+}
+
+.username{
+  padding: .1rem; 
+  margin: 2%;
+  position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.fluid-type {
+  font-size: clamp(1rem, 4vw + 1rem, 3rem);
+
+}
+.icon{
+  position: absolute;
+  left: 10px; 
+  width: 20px; 
+  height: 20px;
+}
+.input-icon{
+  padding-left: 40px; 
+  height: 40px;
+  width: 100%;
+}
+/* Student interface */
+
+.media {
+  border-style: solid;
+  border-color:rgb(138, 138, 138);
+  background-color: rgb(107, 103, 103);
+  width: 350px;
+  border-radius: 11px;
+  position: relative;
+}
+
+.media-body{
+  color: aliceblue;
+}
+
+.map{
+  float: right;
+  border-style: solid;
+  border-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
+  width: 350px;
+  border-radius: 11px;
+  position:relative
+}
+
+.mr-3 {
+  border-style: solid;
+border-color:rgb(0, 0, 0);
+background-color: rgb(0, 0, 0); 
+  border-radius: 11px;
+}
+.mt-0-mb-1{
+  font-style: italic;
+}
+
