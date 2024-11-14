@@ -7,22 +7,20 @@
     <title>Iniciar Sesion</title>
 <!-- Here we just linked the css for the document-->         
          <link href="../templates/static/CSS/bootstrap.min.css" rel="stylesheet">
-         <link href="../templates/static/CSS/styleregis.css" rel="stylesheet">   
+         <link href="../templates/static/CSS/Style.css" rel="stylesheet">   
 <!-- In this part we choose a predeterminated style for the header 1, the body and a size for the images that we use in the main page -->
     <style>
         h1 {
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             text-align: center;
-            color: white;
+            
         }
         body {
             font-family: Arial, Helvetica, sans-serif;
             text-align: center;
             color: white;
         }
-        img {
-            max-width: 20%;
-        }
+       
     </style>
 </head>
 
@@ -33,35 +31,36 @@ work in our site-->
 
 <body>
 <body style="background-color: darkslategrey;">
-    
-   <div class="formulariostudent">
+    <div class="grid">
+   <div class="login">
         <h1>Work</h1>
 <!-- In this part we added a image-->        
-        <img src="../templates/static/Images/estudiante.png" alt="student">
-        <br>
+        <img  class="imglog" src="../templates/static/Images/estudiante.png" alt="student">
+        
         <form method="post">
             <div class="username">
+                <img class="icon" src="../templates/static/Images/usuario.png">
                 <!-- This input is for the username and is mandatory to place -->
-                <input type="text" placeholder="username" required>
+                <input class="input-icon" type="text" placeholder="username" required >
             </div>
-            <br>
-            <div class="username">
+            
+            <div class="user-name">
                 <!-- This is the password input, this one is also mandatory to put in -->
-                <input type="password" placeholder="password" required>
+                <input class="user-name" type="password" placeholder="password" required>
             </div>
-            <br>
-                <div class="remember">Forgot your password?</div>
-                <br>
+            
+
+                
                 <div class="sign-up">
                     <!-- This ref is just in chase that the user does not have an account and here he will be able to create one-->
                     <a href="../templates/Signin.html">Sign up</a>
-                    <br><br>
+                    
                     <!-- In thiss other ref it's when you just put your password and log in, you will be 
                      moved to the student/worker interface-->
-                <a href="../templates/interfazestudiante.html" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">Primary link</a>               
+                <a href="../templates/interfazestudiante.html" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">Log in</a>               
         </form>
     </div> 
-    
+</div>
     <br>
 
 

@@ -8,14 +8,15 @@
     <link rel="stylesheet" href="../templates/static/CSS/Style.css">
 </head>
 <body style="background-color: rgb(47, 79, 79);">
-    <div class="container">
+    <div class="content">
+        <div class="sign">
         <div class="py-5 text-center">
             <img class="col-md-2 mx-auto" src="../templates/static/Images/estudiante.png" alt="">
             <h2>Create account</h2>
             <p class="lead">Please, fill all the information to create your Easy Job account.</p>
         </div>
 
-        <form action="/signup" method="POST" class="needs-validation" novalidate>
+        <form action="{{ url_for('signup') }}" method="POST" class="needs-validation" novalidate>
             <div class="row">
                 <!-- First Name -->
                 <div class="col-md-6 mb-3">
@@ -43,16 +44,16 @@
             </div>
 
             <!-- Zip -->
-            <div class="row">
-                <div class="col-md-6">
+            <div class="rad">
+                <div class="">
                     <label for="zip">Zip</label>
                     <input type="text" class="form-control" id="zip" name="zip" required>
                 </div>
             </div>
 
             <!-- Job Selection -->
-            <div class="row">
-                <div class="col-md-6">
+            <div class="rad">
+                <div>
                     <label>Select One</label>
                     <input type="radio" name="job" id="Student" value="Student" required> Student
                     <input type="radio" name="job" id="Employeer" value="Employeer" required> Employeer
@@ -77,8 +78,9 @@
                 <input type="text" class="form-control" id="curp" name="curp" required>
             </div>
 
-            <button class="btn btn-primary btn-lg btn-block" type="submit">Register</button>
+            <button id="botonreg" class="btn btn-primary btn-lg btn-block" type="submit">Register</button>
         </form>
+        </div>
     </div>
 </body>
 </html>
