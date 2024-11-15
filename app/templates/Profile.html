@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link href="../templates/static/CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="../templates/static/CSS/Style.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
@@ -20,26 +21,33 @@
               </ul>
           </nav>
 </head>
-<body>
-    <div class="container px-lg-5">
-        <div class="row mx-lg-n5">
+<body style="background-color: #2f4f4f;">
+    <div class="MenuP">
+        <div class="InfoPG">
           <div class="col py-3 px-lg-5 border bg-light">
-          <div>PERSONAL INFO</div>
+          <div class="repp">PERSONAL INFO</div>
           <!-- LLAMAR IMAGEN DEL EMPLEADO/EMPLEADOR -->
-
+            <img class="profpic" src="../templates/static/Images/estudiante.png">
           <!-- LLAMAR EL TIPO DE USUARIO (EMPLEADOR/ESTUDIANTE) -->
           <div class="UserType">
-            
+            <p class="BC">User type: <p class="InfoP">Student</p></p>
           </div>
           <!-- LLAMAR LA DIRECCION DEL USUARIO -->
           <div class="AddressUser">
-
+            <p class="BC">Address: <p class="InfoP">Santa Rosa 9812</p></p>
+          </div>
+          <div class="PhoneUser">
+            <p class="BC">Phone: <p class="InfoP">614-444-2352</p></p>
+          </div>
+          <div class="DelUser">
+            <button class="DropUser">Delete my user</button>
           </div>
 
           </div>
           <div class="col py-3 px-lg-5 border bg-light">
-            <div>REPORTS</div>
+            <div class="repp">REPORTS</div>
             <!-- LLAMAR LOS REPORTES DEL USUARIO -->
+             <button class="reportB" type="menu">Reports</button>
             <div class="UserReport">
 
             </div>
