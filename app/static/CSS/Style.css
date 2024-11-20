@@ -8,7 +8,7 @@ justify-content: center;
 }
 
 .sign {
-  background-color: #ffffff;
+  margin-top: 1%;
   padding: 1rem;
   border-radius: 11px;
   display: flex;
@@ -95,19 +95,20 @@ justify-content: center;
   }
   
   .login{
-    background-color: #ffffff;
     padding: 1.5rem 1rem;
     max-width: max-content;
     border-radius: 11px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #000000;  
+    color: #000000;
+    margin-top: 7%;  
   }
   .user-name{
-    width: 14.4rem;
+    width: 100%;
     border-color: #000000;
     padding: .4rem;
+
   }
   
   .imglog{
@@ -188,6 +189,11 @@ justify-content: center;
   }
 
 /* PROFILE */
+
+.UserType{
+margin-top: 3%;
+}
+
 .MenuP{
 margin-top: 1%;
 display: flex;
@@ -239,6 +245,14 @@ width: fit-content;
   flex-direction: column;
 }
 
+.form-group{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Arial Narrow';
+  flex-direction: column;
+}
+
 .DelUser{
   display: flex;
   align-items: center;
@@ -255,14 +269,22 @@ width: fit-content;
   width: 30%;
 }
 
+.tabrep{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
 .reportB{
   background-color: #ff0f00;
   color: #fff;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 1.2rem;
-  padding: 7%;
-  margin-top: 20%;
-  margin-left: 37%;
+  padding: 5%;
+  margin-top: 5%;
+  margin-left: 39%;
   display: flex;
   align-items: center;
   justify-content: center;
