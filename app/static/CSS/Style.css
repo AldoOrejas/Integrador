@@ -29,6 +29,14 @@ justify-content: center;
 }
 /* employer interface */
 
+.userjob-nm{
+  margin-left: 10%;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
 .jumbotron {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -72,9 +80,13 @@ justify-content: center;
   border-style: solid;
   border-radius: 11px;
   background-color: rgb(47 49 79);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   }
   
-  .dex{
+  .des{
     padding: 1.5rem;
     max-width: 80%;
     border-radius: 11px;
@@ -284,7 +296,6 @@ width: fit-content;
   font-size: 1.2rem;
   padding: 5%;
   margin-top: 5%;
-  margin-left: 39%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -297,4 +308,16 @@ width: fit-content;
 } 
 .reportB:hover{
   transform: scale(1.1);
+}
+
+.addbuild{
+  background-color: #2FACFD;
+  border-color: #2FACFD;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1%;
+  padding: 2%;
+  border-radius: 6%;
+  box-shadow: 0 6px 12px #000;
 }
