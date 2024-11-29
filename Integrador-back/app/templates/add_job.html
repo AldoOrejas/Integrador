@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir trabajo</title>
+    <link href="../static/CSS/Style.css" rel="stylesheet">
+    <link href="../static/CSS/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand">Easy Job</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ url_for('interfazempleador') }}">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('profileother') }}">Perfil</a> <!-- Enlace actualizado -->
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2>Crear un trabajo</h2>
+        <form action="{{ url_for('add_job') }}" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="jobDescription">Descripción del trabajo</label>
+                <textarea id="jobDescription" name="jobDescription" class="form-control" rows="3" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="building">Selecciona un edificio</label>
+                <select id="building" name="building" class="form-control" required>
+                    <option value="" disabled selected>Selecciona un edificio</option>
+                    {% for building in buildings %}
+                        <option value="{{ building[0] }}">{{ building[3] }} - {{ building[4] }}</option>  <!-- ZIP - Direction -->
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="jobImage">Sube una imagen</label>
+                <input type="file" class="form-control-file" id="jobImage" name="jobImage">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Añadir trabajo</button>
+        </form>
+    </div>
+
+    <footer class="text-muted mt-5">
+        <div class="container">
+            <p class="float-right">
+                <a href="#">Back to top</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

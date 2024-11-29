@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Trabajos</title>
+    <link href="../static/CSS/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/CSS/styleregis.css">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="">Easy Job</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('profile') }}">Perfil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('interfazestudiante') }}">Inicio</a>
+                </li>
+            </ul>
+            <!-- Saludo al usuario logueado -->
+            <span class="navbar-text">
+                {% if session['user_name'] %}
+                    ¡Hola, {{ session['user_name'] }}!
+                {% else %}
+                    Usuario no identificado
+                {% endif %}
+            </span>
+            <!-- Botón para cerrar sesión -->
+            {% if session['user_name'] %}
+                <a href="/logout" class="btn btn-danger ml-3">Cerrar sesión</a>
+            {% endif %}
+        </div>
+    </nav>
+</head>
+<body style="background-color: #fff;">
+
+
+    <!-- Contenido principal -->
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <h1>Mis Trabajos Aceptados</h1>
+            <p>Aquí podrás ver todos los trabajos que has aceptado.</p>
+
+            <div class="row">
+                <!-- Iterar sobre los trabajos aceptados y mostrar un enlace al chat -->
+                {% for job_chat in jobs_with_chat %}
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <!-- Mostrar una imagen predeterminada si no hay imagen del trabajo -->
+                            <img src="{{ url_for('static', filename='images/' + (job_chat['job_image'] if job_chat['job_image'] else 'default_image.png')) }}" class="bd-placeholder-img card-img-top" alt="{{ job_chat['description'] }}">
+                            <div class="card-body">
+                                <p class="card-text">{{ job_chat['description'] }}</p>  <!-- Descripción del trabajo -->
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">Publicado el {{ job_chat['created_at'] }}</small>  <!-- Fecha de creación -->
+                                </div>
+
+                                <!-- Enlace al chat dentro de la tarjeta del trabajo -->
+                                <div class="mt-3">
+                                    <a href="{{ url_for('livechat', job_id=job_chat['idJob']) }}" class="btn btn-primary">Ir al Chat</a>
+                                </div>
+
+                                <!-- Botón para reportar al empleador -->
+                                <div class="mt-3">
+                                    <a href="{{ url_for('report_employer', reported_user_id=job_chat['employer_id']) }}" class="btn btn-danger">Reportar Empleador</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                    <p>No tienes trabajos aceptados en este momento.</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

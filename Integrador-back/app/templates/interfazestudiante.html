@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio Estudiante</title>
+    <link href="../static/CSS/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/CSS/styleregis.css">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="">Easy Job</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <!-- Enlace a Profile -->
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('profile') }}">Perfil</a>
+                </li>
+                <!-- Enlace a Trabajos Aceptados -->
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('mis_trabajos') }}">Trabajos Aceptados</a>
+                </li>
+            </ul>
+            <!-- Saludo al usuario logueado -->
+            <span class="navbar-text">
+                {% if session['user_name'] %}
+                    ¡Hola, {{ session['user_name'] }}!
+                {% else %}
+                    Usuario no identificado
+                {% endif %}
+            </span>
+            <!-- Botón para cerrar sesión -->
+            {% if session['user_name'] %}
+                <a href="/logout" class="btn btn-danger ml-3">Cerrar sesión</a>
+            {% endif %}
+        </div>
+    </nav>    
+</head>
+<body style="background-color: #fff;">
+
+    <!-- Contenido principal -->
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <h1>Bienvenido, {{ session['user_name'] }}!</h1>
+            <p>Aquí podrás ver las ofertas de trabajo disponibles y postularte a ellas.</p>
+
+            <div class="row">
+                <!-- Iterar sobre los trabajos activos y mostrar una tarjeta por cada uno -->
+                {% for job in jobs %}
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <img src="{{ url_for('static', filename='images/' + (job[2] if job[2] else 'default_image.png')) }}" class="bd-placeholder-img card-img-top" alt="{{ job[1] }}">
+                            <div class="card-body">
+                                <p class="card-text">{{ job[1] }}</p>  <!-- Descripción del trabajo -->
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="{{ url_for('livechat', job_id=job[0]) }}" class="btn btn-sm btn-outline-secondary">Ver detalles</a>
+                                        <!-- Agregar botón de aceptar trabajo -->
+                                        <form action="{{ url_for('accept_job', job_id=job[0]) }}" method="POST">
+                                            <button type="submit" class="btn btn-sm btn-primary">Aceptar trabajo</button>
+                                        </form>
+                                      </div>
+                                    <small class="text-muted">Publicado el {{ job[3] }}</small>  <!-- Fecha de creación -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                    <p>No hay trabajos disponibles en este momento.</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

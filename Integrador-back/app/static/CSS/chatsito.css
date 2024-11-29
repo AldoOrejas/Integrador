@@ -1,0 +1,69 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white; /* Color de fondo arena */
+    margin: 0;
+    padding: 0;
+}
+
+.chat-container {
+    width: 400px;
+    margin: 50px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.chat-box {
+    height: 300px;
+    padding: 10px;
+    overflow-y: scroll;
+    border-bottom: 1px solid #ddd;
+}
+
+.message {
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    max-width: 70%;
+}
+
+.message strong {
+    color: #333;
+}
+
+.message-input {
+    display: flex;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.message-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.message-input button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.message-input button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para el timestamp */
+.timestamp {
+    font-size: 0.75em; /* Tamaño más pequeño */
+    color: #999; /* Color gris para el timestamp */
+    margin-left: 10px; /* Espaciado a la izquierda */
+}

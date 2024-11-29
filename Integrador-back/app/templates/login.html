@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <!-- Aquí se vinculan los archivos CSS -->
+    <link href="../static/CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/CSS/Style.css" rel="stylesheet">
+    <style>
+        h1 {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="login bg-light">
+            <h1>Easy Job</h1>
+            <!-- Imagen para el encabezado -->
+            <img class="imglog" src="../static/Images/estudiante.png" alt="student">
+            
+            <!-- Formulario que se conecta a /login -->
+            <form method="post" action="/login">
+                <div class="username">
+                    <img class="icon" src="../static/Images/usuario.png" alt="User Icon">
+                    <!-- Campo para el nombre de usuario -->
+                    <input class="input-icon" type="text" name="email" placeholder="mail" required>
+                </div>
+                <div class="user-name">
+                    <!-- Campo para la contraseña -->
+                    <input class="user-name" type="password" name="password" placeholder="password" required>
+                </div>
+                <div class="sign-up">
+                    <!-- Redirección a la página /signin -->
+                    <a href="{{ url_for('signup_page') }}">Sign up</a>
+                    <!-- Botón para enviar el formulario -->
+                    <button type="submit" class="btn btn-primary btn-lg">Log in</button>
+                </div>
+            </form>
+        </div> 
+    </div>
+    <br>
+</body>
+</html>

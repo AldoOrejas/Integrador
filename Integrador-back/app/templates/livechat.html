@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat entre usuarios</title>
+    <link href="../static/CSS/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/CSS/chatsito.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{{ url_for('home') }}">Easy Job</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <!-- Botón de Inicio dinámico -->
+                    {% if session['user_type'] == 'student' %}
+                        <a class="nav-link" href="{{ url_for('interfazestudiante') }}">Inicio <span class="sr-only">(current)</span></a>
+                    {% elif session['user_type'] == 'employer' %}
+                        <a class="nav-link" href="{{ url_for('interfazempleador') }}">Inicio <span class="sr-only">(current)</span></a>
+                    {% endif %}
+                </li>
+                <li class="nav-item">
+                    <!-- Botón de Perfil dinámico -->
+                    {% if session['user_type'] == 'student' %}
+                        <a class="nav-link" href="{{ url_for('profile') }}">Perfil</a>
+                    {% elif session['user_type'] == 'employer' %}
+                        <a class="nav-link" href="{{ url_for('profileother') }}">Perfil</a>
+                    {% endif %}
+                </li>
+            </ul>
+            <!-- Saludo al usuario logueado -->
+            <span class="navbar-text">
+                {% if session['user_name'] %}
+                    ¡Hola, {{ session['user_name'] }}!
+                {% else %}
+                    Usuario no identificado
+                {% endif %}
+            </span>
+            <!-- Botón para cerrar sesión -->
+            {% if session['user_name'] %}
+                <a href="{{ url_for('logout') }}" class="btn btn-danger ml-3">Cerrar sesión</a>
+            {% endif %}
+        </div>
+    </nav>
+
+    <!-- Contenedor de chat -->
+    <div class="chat-container">
+        <!-- Encabezado del chat con el nombre del otro usuario -->
+        <div class="chat-header">
+            {% if session['user_type'] == 'student' %}
+                <h3>Chat con {{ employer_name }}</h3>  <!-- Nombre del empleador -->
+            {% elif session['user_type'] == 'employer' %}
+                <h3>Chat con {{ student_name }}</h3>  <!-- Nombre del estudiante -->
+            {% endif %}
+        </div>
+
+        <!-- Mostrar los mensajes del chat -->
+        <div class="chat-box" id="chatBox">
+            {% for message in messages %}
+                <div class="message">
+                    <strong>{{ message.sender }}:</strong> {{ message.message }}
+                    <span class="timestamp">{{ message.timestamp }}</span>
+                </div>
+            {% endfor %}
+        </div>        
+
+        <!-- Formulario para enviar nuevos mensajes -->
+        <div class="message-input">
+            <form method="POST" action="{{ url_for('send_message', job_id=job_id) }}">
+                <input type="text" id="messageInput" name="messageInput" placeholder="Escribe un mensaje..." required />
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Agregar los scripts de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
