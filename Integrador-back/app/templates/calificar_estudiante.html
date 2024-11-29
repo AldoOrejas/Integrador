@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calificar Estudiante</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Califica al Estudiante</h1>
+
+        <form method="POST">
+            <div class="form-group">
+                <label for="calificacion">Calificación (1 a 10):</label>
+                <input type="number" class="form-control" id="calificacion" name="calificacion" min="1" max="10" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar Calificación</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Estudiante</title>
+    <link href="../static/CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/CSS/Style.css" rel="stylesheet">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand">Easy Job</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('interfazestudiante') }}">Inicio</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</head>
+
+<body>
+    <div class="MenuP">
+        <div class="InfoPG">
+            <div class="col py-3 px-lg-5 border bg-light">
+                <div class="repp">INFORMACIÓN PERSONAL</div>
+                <img class="profpic" src="../static/Images/estudiante.png" alt="Foto de perfil">
+
+                <!-- Formulario para mostrar y actualizar la información -->
+                <form method="POST">
+                    <div class="UserType">
+                        <p class="BC">Nombre: <span class="InfoP">{{ user[1] }}</span></p>
+                        <label for="editName">Editar Nombre:</label>
+                        <input type="text" id="editName" name="editName" class="form-control" value="{{ user[1] }}" required>
+                    </div>
+
+                    <div class="AddressUser">
+                        <p class="BC">Correo: <span class="InfoP">{{ user[4] }}</span></p>
+                        <label for="editEmail">Editar Correo:</label>
+                        <input type="email" id="editEmail" name="editEmail" class="form-control" value="{{ user[4] }}" required>
+                    </div>
+
+                    <div class="PhoneUser">
+                        <p class="BC">Teléfono: <span class="InfoP">{{ user[5] }}</span></p>
+                        <label for="editPhone">Editar Teléfono:</label>
+                        <input type="text" id="editPhone" name="editPhone" class="form-control" value="{{ user[5] }}" required>
+                    </div>
+
+                    <!-- Mostrar Calificación -->
+                    <div class="CalificationUser">
+                        <p class="BC">Calificación: <span class="InfoP">{{ user[8] }}</span></p>
+                    </div>
+
+                    <!-- Contenedor para centrar los botones -->
+                    <div class="text-center mt-4">
+                        <!-- Botón para actualizar información -->
+                        <button type="submit" class="btn btn-success mt-3">Actualizar Información</button>
+                        <!-- Botón para eliminar la cuenta -->
+                        <button type="submit" name="delete_account" class="btn btn-danger mt-3">Eliminar Cuenta</button>
+                    </div>
+                </form>
+
+                <!-- Mostrar el número de reportes -->
+                <div class="mt-4">
+                    <p>Total de Reportes: {{ total_reportes }}</p>
+
+                    <!-- Mostrar aviso si el total de reportes es 2 o más -->
+                    {% if total_reportes >= 2 %}
+                    <div class="alert alert-warning" role="alert">
+                        <strong>¡Advertencia!</strong> tienes más de 2 reportes. Tu cuenta podría estar en riesgo.
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

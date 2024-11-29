@@ -1,0 +1,347 @@
+/*SIGN IN CSS */
+
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  }
+  
+  .sign {
+    margin-top: 1%;
+    padding: 1rem;
+    border-radius: 11px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+  }
+  
+  .rad{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+  }
+  #botonreg{
+    border-radius: .5rem;
+  }
+  /* employer interface */
+  
+  .userjob-nm{
+    margin-left: 10%;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .jumbotron {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      margin-bottom: 0;
+      background-color: #fff;
+    }
+    @media (min-width: 768px) {
+      .jumbotron {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+      }
+    }
+    
+    .jumbotron p:last-child {
+      margin-bottom: 0;
+    }
+    
+    .jumbotron h1 {
+      font-weight: 300;
+    }
+    
+    .jumbotron .container {
+      max-width: 40rem;
+    }
+    
+    footer {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+    
+    footer p {
+      margin-bottom: .25rem;
+    }
+    /* JobCreation */
+  .blck-1{
+    margin: 1.5rem;
+    color: #fff;
+    padding: 1.5rem;
+    align-content: center;
+    max-width: 90%;
+    border-style: solid;
+    border-radius: 11px;
+    background-color: rgb(47 49 79);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    }
+    
+    .des{
+      padding: 1.5rem;
+      max-width: 80%;
+      border-radius: 11px;
+      
+    }
+    
+    .btn-primary{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+    /* Login CSS */
+    
+    .grid{
+      margin-top: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .login{
+      padding: 1.5rem 1rem;
+      max-width: max-content;
+      border-radius: 11px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #000000;
+      margin-top: 7%;  
+    }
+    .user-name{
+      width: 100%;
+      border-color: #000000;
+      padding: .4rem;
+  
+    }
+    
+    .imglog{
+      width: 25%;
+      border-style: solid;
+      border-color: #000000;
+      border-radius: 8rem;
+      display: flex;
+      justify-content: center;
+      margin: 3%;
+    }
+    
+    .username{
+      padding: .1rem; 
+      margin: 2%;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    
+    .fluid-type {
+      font-size: clamp(1rem, 4vw + 1rem, 3rem);
+    
+    }
+    .icon{
+      position: absolute;
+      left: 1rem; 
+      width: 1rem; 
+      height: 1rem;
+    }
+    .input-icon{
+      padding-left: 40px; 
+      height: 40px;
+      width: 100%;
+    }
+    
+    .sign-up{
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      margin-bottom: 1%;
+    }
+    /* Student interface */
+    
+    .media {
+      border-style: solid;
+      border-color:rgb(138, 138, 138);
+      background-color: rgb(107, 103, 103);
+      width: 350px;
+      border-radius: 11px;
+      position: relative;
+    }
+    
+    .media-body{
+      color: aliceblue;
+    }
+    
+    .map{
+      float: right;
+      border-style: solid;
+      border-color: rgb(255, 255, 255);
+      background-color: rgb(255, 255, 255);
+      width: 350px;
+      border-radius: 11px;
+      position:relative
+    }
+    
+    .mr-3 {
+      border-style: solid;
+    border-color:rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0); 
+      border-radius: 11px;
+    }
+    .mt-0-mb-1{
+      font-style: italic;
+    }
+  
+  /* PROFILE */
+  
+  .UserType{
+  margin-top: 3%;
+  }
+  
+  .MenuP{
+  margin-top: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  
+  .InfoPG{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: fit-content;
+  }
+  
+  .repp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2rem;
+  }
+  
+  .profpic{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 35%;
+  }
+  
+  .BC{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    border-radius: .9rem;
+    background-color: #BAFFFE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .InfoP{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:'Arial Narrow';
+    flex-direction: column;
+  }
+  
+  .form-group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial Narrow';
+    flex-direction: column;
+  }
+  
+  .DelUser{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .DropUser{
+    background-color: #ff0f00;
+    color: #ffffff;
+    border-color: #ff0f00;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: 0 2px 9px #000000; 
+    width: 30%;
+  }
+  
+  .tabrep{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+  }
+  
+  .reportB{
+    background-color: #ff0f00;
+    color: #fff;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2rem;
+    padding: 5%;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-color: #f00;
+    border-radius: 1rem;
+    cursor: pointer;
+    box-shadow: 0 6px 12px #000002;
+    transition: transform 0.3s, box-shadow 0.3s;
+  } 
+  .reportB:hover{
+    transform: scale(1.1);
+  }
+  
+  .addbuild{
+    background-color: #2FACFD;
+    border-color: #2FACFD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1%;
+    padding: 2%;
+    border-radius: 6%;
+    box-shadow: 0 6px 12px #000;
+  }
+  
+        /* Estilo para el botón pequeño con fondo negro */
+        .btn-add-job {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 5px 10px;  /* Botón pequeño */
+          background-color: grey;  /* Fondo negro */
+          color: white;
+          border: none;
+          border-radius: 5px;
+          font-size: 14px;  /* Fuente más pequeña */
+          cursor: pointer;
+          text-align: center;
+          margin-left: 0;  /* Asegúrate de que no haya márgenes a la izquierda */
+      }
+  
+      .btn-add-job img {
+          max-height: 100%;
+          max-width: 100%;
+          height: 20px;  /* Tamaño de la imagen pequeño */
+          width: auto;
+          margin-right: 5px;  /* Espaciado entre la imagen y el texto */
+      }

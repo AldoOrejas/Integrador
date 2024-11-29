@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaz Empleador</title>
+    <link href="../static/CSS/Style.css" rel="stylesheet">
+    <link href="../static/CSS/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand">Easy Job</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('profileother') }}">Perfil</a>
+                </li>
+            </ul>
+
+            <div class="d-flex">
+                <button class="btn btn-outline-primary btn-sm">
+                    <a href="{{ url_for('add_job') }}" class="text-decoration-none text-dark">
+                        <img src="../static/Images/add.png" alt="Add Job" class="mr-2" style="width: 20px; height: 20px;">
+                        Añadir trabajo
+                    </a>
+                </button>
+            </div>
+
+            <div class="ml-auto d-flex">
+                <a href="{{ url_for('logout') }}" class="btn btn-outline-danger btn-sm mr-2">Cerrar Sesión</a>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="navbar navbar-dark">
+            <div class="container d-flex justify-content-between">
+                <a href="/app/templates/JobCreation.html" class="navbar-brand d-flex align-items-center"></a>
+            </div>
+        </div>
+    </header>
+
+    <main role="main">
+        <section class="jumbotron text-center">
+            <div class="container">
+                <h1>Tus trabajos</h1>
+                <p class="lead text-muted">Aquí puedes ver los trabajos que tienes activos</p>
+                {% if session['user_name'] %}
+                    <p>Bienvenido, {{ session['user_name'] }}!</p>
+                {% else %}
+                    <p>Welcome, Guest!</p>
+                {% endif %}
+            </div>
+        </section>
+
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    {% for job in jobs %}
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <img src="{{ url_for('static', filename='images/' + job[2]) }}" class="bd-placeholder-img card-img-top" alt="Imagen del trabajo">
+                            <div class="card-body">
+                                <p class="card-text">{{ job[1] }}</p> <!-- Descripción del trabajo -->
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <form action="{{ url_for('delete_job', job_id=job[0]) }}" method="POST" style="display:inline;">
+                                            <button type="submit" class="btn btn-sm btn-outline-secondary">Eliminar trabajo</button>
+                                        </form>                                      
+                                    </div>
+
+                                    {% if job[4] %}
+                                        <!-- Botón para reportar al estudiante o empleador -->
+                                        <div class="btn-group">
+                                            <form action="{{ url_for('report_user', reported_user_id=job[4]) }}" method="POST" style="display:inline;">
+                                                <button type="submit" class="btn btn-sm btn-outline-danger">Reportar Usuario</button>
+                                            </form>
+                                        </div>
+                                    {% endif %}
+
+                                    <!-- Mostrar el botón para Live Chat solo si el trabajo ha sido aceptado -->
+                                    {% if job[4] %}
+                                        <div class="btn-group">
+                                            <a href="{{ url_for('livechat', job_id=job[0]) }}" class="btn btn-sm btn-outline-primary">Ir al Chat</a>
+                                        </div>
+                                    {% endif %}
+                                    
+                                    <small class="text-muted">{{ job[3] }}</small> <!-- Fecha de creación -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% else %}
+                    <p>No se encontraron trabajos</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-muted">
+        <div class="container">
+            <p class="float-right">
+                <a href="#">Vuelta al inicio</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
