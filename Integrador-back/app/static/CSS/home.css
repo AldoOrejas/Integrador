@@ -9,28 +9,35 @@
 html, body {
     height: 100%;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;  /* Fondo suave para no ser completamente blanco */
+    background-color: #e2e2e2;
 }
 
 /* Estilos del header */
 header {
-    background-color: #3b9e4e; /* Verde metálico más fuerte */
-    color: white;
-    padding: 40px;
+    background-color: #e6e6e6;
+    color: black;
+    padding: 30px;
     text-align: center;
     font-size: 2.5rem;
     font-weight: bold;
     width: 100%;
     box-sizing: border-box;
     margin-left: 0;
-    border-bottom: 4px solid #2c7a39;  /* Añadimos una línea inferior */
+}
+
+.lg{
+    margin-top:4%;
+}
+
+h1{
+    margin-top: 6%;
 }
 
 /* Estilo para el menú de navegación */
 nav ul {
     list-style-type: none;
     padding: 0;
-    margin-top: 20px; /* Separación de la barra de navegación */
+    margin-top: 5%; /* Separación de la barra de navegación */
 }
 
 nav ul li {
@@ -39,20 +46,20 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: 1.2rem;
     transition: color 0.3s ease; /* Suavizamos la transición del color */
 }
 
 nav ul li a:hover {
-    color: #a8e3a1;  /* Un verde más claro cuando el cursor pasa */
+    color: #2196f3;  /* Un verde más claro cuando el cursor pasa */
 }
 
 /* Botones con estilo metálico */
 button, .btn {
-    background-color: #2c7a39;  /* Verde metálico */
-    border: 2px solid #218738;  /* Verde un poco más oscuro para los bordes */
+    background-color: #ffffff;
+    border: 2px solid #ffffff;  
     padding: 10px 20px;
     font-size: 1.2rem;
     color: white;
@@ -64,8 +71,8 @@ button, .btn {
 }
 
 button:hover, .btn:hover {
-    background-color: #4CAF50;  /* Verde más brillante cuando se pasa el cursor */
-    border-color: #3b9e4e;  /* Alineado con el cambio del fondo */
+    background-color: #e2e2e2;  /* Verde más brillante cuando se pasa el cursor */
+    border-color: #e2e2e2;  /* Alineado con el cambio del fondo */
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);  /* Efecto de sombra para dar un toque más profesional */
 }
 
@@ -84,6 +91,8 @@ main {
     padding: 20px;
     flex: 1;
     max-width: 1200px;
+    margin-top: 8%;
+    margin: 5%;
 }
 
 /* Secciones con márgenes para separar cada bloque */
@@ -102,22 +111,22 @@ h2 {
 /* Estilo de los enlaces de contacto */
 #we {
     text-decoration: none;
-    color: #3b9e4e;
+    color: #2196f3;
     font-weight: bold;
     font-size: 1.1rem;
     transition: color 0.3s ease;
 }
 
 #we:hover {
-    color: #2c7a39;  /* Cambio de color cuando se pasa el cursor */
+    color: #e2e2e2;  /* Cambio de color cuando se pasa el cursor */
 }
 
 /* Estilo del footer */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #3b9e4e;
-    color: white;
+    background-color: #e2e2e2;
+    color: black;
     position: relative;
     width: 100%;
     bottom: 0;
@@ -125,7 +134,7 @@ footer {
     font-weight: bold;
     box-sizing: border-box;
     margin-left: 0;
-    border-top: 4px solid #2c7a39;
+    border-top: 4px solid #e2e2e2;
 }
 
 footer p {
