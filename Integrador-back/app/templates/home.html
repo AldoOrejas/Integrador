@@ -5,26 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Inicio - Easy Job</title>
     <link rel="stylesheet" href="../static/CSS/home.css">
-</head>
-<body>
     <header>
         <h1>Bienvenido a Easy Job</h1>
         <nav>
             <ul>
                 <li><a href="{{ url_for('signup_page') }}">Registro</a></li>
                 <li><a href="{{ url_for('login_page') }}">Iniciar sesión</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#about">Acerca de nosotros</a></li>
                 <li><a href="#help">Ayuda</a></li>
             </ul>
-        </nav>        
+        </nav>
+        <img class="lg" src="../static/Images/logo.png" width="15%">        
     </header>
+</head>
+<body>
 
     <main>
         <section id="about">
-            <h2>About Us</h2>
+            <h2>Acerca de nosotros</h2>
             <p>Somos una compañia enfocada en ayudar estudiantes y gente que busca ayuda con sus quehaceres.</p>
         </section>
-
         <section id="services">
             <h2>Servicios</h2>
             <ul>
@@ -32,13 +32,11 @@
                 <li>Ver trabajos</li>
             </ul>
         </section>
-
         <section id="contact">
             <h2>Contacto</h2>
             <a id="we" href="mailto:metalmario777kojimas@hotmail.com">FeedBack</a>
         </section>
     </main>
-
     <footer>
         <p>&copy; 2024 Easy Job. Todos los derechos reservados.</p>
     </footer>

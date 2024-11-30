@@ -242,7 +242,7 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: large;
     border-radius: .9rem;
-    background-color: #BAFFFE;
+    background-color: #e6e6e6;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -327,15 +327,15 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 5px 10px;  /* Botón pequeño */
-          background-color: grey;  /* Fondo negro */
+          padding: 5px 10px; 
+          background-color: grey;  
           color: white;
           border: none;
           border-radius: 5px;
-          font-size: 14px;  /* Fuente más pequeña */
+          font-size: 14px;  
           cursor: pointer;
           text-align: center;
-          margin-left: 0;  /* Asegúrate de que no haya márgenes a la izquierda */
+          margin-left: 0;  
       }
   
       .btn-add-job img {
@@ -343,5 +343,5 @@
           max-width: 100%;
           height: 20px;  /* Tamaño de la imagen pequeño */
           width: auto;
-          margin-right: 5px;  /* Espaciado entre la imagen y el texto */
+          margin-right: 5px;  
       }
